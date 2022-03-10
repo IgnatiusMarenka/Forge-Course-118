@@ -26,7 +26,7 @@ public class MCCourseMod
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-
+    //Very important Comment
     public MCCourseMod()
     {
         // Register the setup method for modloading
