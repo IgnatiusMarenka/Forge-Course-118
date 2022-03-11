@@ -1,6 +1,7 @@
 package com.superingo.mccourse;
 
 import com.mojang.logging.LogUtils;
+import com.superingo.mccourse.block.ModBlocks;
 import com.superingo.mccourse.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -34,6 +35,7 @@ public class MCCourseMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 
