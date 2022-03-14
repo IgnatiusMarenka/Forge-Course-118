@@ -52,6 +52,9 @@ public class DowsingRodItem extends Item {
     private boolean isValuableBlock(Block block) {
         return block == Blocks.COAL_ORE || block == Blocks.COPPER_ORE
                 || block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE
-                || block == Blocks.EMERALD_ORE || block == Blocks.ANCIENT_DEBRIS;
+                || block == Blocks.EMERALD_ORE || block == Blocks.ANCIENT_DEBRIS
+                || block == Blocks.DEEPSLATE_COAL_ORE || block == Blocks.DEEPSLATE_COPPER_ORE
+                || block == Blocks.DEEPSLATE_DIAMOND_ORE || block == Blocks.DEEPSLATE_IRON_ORE
+                || block == Blocks.DEEPSLATE_EMERALD_ORE;
     }
 }
