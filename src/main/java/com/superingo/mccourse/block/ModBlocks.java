@@ -1,6 +1,7 @@
 package com.superingo.mccourse.block;
 
 import com.superingo.mccourse.MCCourseMod;
+import com.superingo.mccourse.block.custom.SpeedyBlock;
 import com.superingo.mccourse.item.ModCreativeModeTab;
 import com.superingo.mccourse.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -34,6 +35,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlock("deepslate_cobalt_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){

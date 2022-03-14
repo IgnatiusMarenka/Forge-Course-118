@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mccourse:cobalt_ingot"
+    },
+    "X": {
+      "item": "minecraft:beacon"
+    }
+  },
+  "result": {
+    "item": "mccourse:speedy_block"
+  }
+}
