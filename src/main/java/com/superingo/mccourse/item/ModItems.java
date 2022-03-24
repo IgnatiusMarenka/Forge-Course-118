@@ -49,7 +49,7 @@ public class ModItems {
             () -> new AxeItem(ModTiers.COBALT, 4, 0f,
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
-    public static final RegistryObject<Item> COBALT_HOE = ITEMS.register("coablt_hoe",
+    public static final RegistryObject<Item> COBALT_HOE = ITEMS.register("cobalt_hoe",
             () -> new HoeItem(ModTiers.COBALT, 0, 0f,
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
