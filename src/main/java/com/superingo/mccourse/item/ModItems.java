@@ -3,6 +3,7 @@ package com.superingo.mccourse.item;
 import com.superingo.mccourse.MCCourseMod;
 import com.superingo.mccourse.item.custom.CoalSliverItem;
 import com.superingo.mccourse.item.custom.DowsingRodItem;
+import com.superingo.mccourse.item.custom.LevitationSwordItem;
 import com.superingo.mccourse.item.custom.PaxelItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -35,7 +36,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).food(ModFoods.TURNIP)));
 
     public static final RegistryObject<Item> COBALT_SWORD = ITEMS.register("cobalt_sword",
-            () -> new SwordItem(ModTiers.COBALT, 2, 3f,
+            () -> new LevitationSwordItem(ModTiers.COBALT, 2, 3f,
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_PICKAXE = ITEMS.register("cobalt_pickaxe",
