@@ -1,10 +1,7 @@
 package com.superingo.mccourse.item;
 
 import com.superingo.mccourse.MCCourseMod;
-import com.superingo.mccourse.item.custom.CoalSliverItem;
-import com.superingo.mccourse.item.custom.DowsingRodItem;
-import com.superingo.mccourse.item.custom.LevitationSwordItem;
-import com.superingo.mccourse.item.custom.PaxelItem;
+import com.superingo.mccourse.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -61,7 +58,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_HELMET = ITEMS.register("cobalt_helmet",
-            () -> new ArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD,
+            () -> new ModArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_CHESTPLATE = ITEMS.register("cobalt_chestplate",
