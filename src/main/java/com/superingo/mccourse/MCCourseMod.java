@@ -2,6 +2,7 @@ package com.superingo.mccourse;
 
 import com.mojang.logging.LogUtils;
 import com.superingo.mccourse.block.ModBlocks;
+import com.superingo.mccourse.enchantment.ModEnchantments;
 import com.superingo.mccourse.item.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -39,6 +40,8 @@ public class MCCourseMod
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+
+        ModEnchantments.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
