@@ -1,6 +1,7 @@
 package com.superingo.mccourse.item;
 
 import com.superingo.mccourse.MCCourseMod;
+import com.superingo.mccourse.block.ModBlocks;
 import com.superingo.mccourse.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -79,6 +80,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
             () -> new DataTabletItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> TURNIP_SEEDS = ITEMS.register("turnip_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

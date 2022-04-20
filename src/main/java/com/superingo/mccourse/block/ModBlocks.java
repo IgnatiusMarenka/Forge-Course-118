@@ -3,6 +3,7 @@ package com.superingo.mccourse.block;
 import com.superingo.mccourse.MCCourseMod;
 import com.superingo.mccourse.block.custom.CobaltLampBlock;
 import com.superingo.mccourse.block.custom.SpeedyBlock;
+import com.superingo.mccourse.block.custom.TurnipCropBlock;
 import com.superingo.mccourse.item.ModCreativeModeTab;
 import com.superingo.mccourse.item.ModItems;
 import net.minecraft.network.chat.Component;
@@ -88,6 +89,10 @@ public class ModBlocks {
                     .strength(2f).requiresCorrectToolForDrops()
                     .lightLevel((state) -> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0)),
             ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> TURNIP_CROP = BLOCKS.register("turnip_crop",
+            () -> new TurnipCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)
+                    .noCollission().noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                      CreativeModeTab tab, String tooltipKey){
