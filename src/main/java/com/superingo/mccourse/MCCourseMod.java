@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.superingo.mccourse.block.ModBlocks;
 import com.superingo.mccourse.enchantment.ModEnchantments;
 import com.superingo.mccourse.item.ModItems;
+import com.superingo.mccourse.sound.ModSounds;
 import com.superingo.mccourse.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -45,6 +46,7 @@ public class MCCourseMod
         ModBlocks.register(eventBus);
 
         ModEnchantments.register(eventBus);
+        ModSounds.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
