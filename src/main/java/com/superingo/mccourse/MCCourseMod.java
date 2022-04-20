@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.superingo.mccourse.block.ModBlocks;
 import com.superingo.mccourse.enchantment.ModEnchantments;
 import com.superingo.mccourse.item.ModItems;
+import com.superingo.mccourse.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
@@ -53,6 +54,8 @@ public class MCCourseMod
     private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_DOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_TRAPDOOR.get(), RenderType.cutout());
+
+        ModItemProperties.addCustomItemProperties();
     }
 
     private void setup(final FMLCommonSetupEvent event)
