@@ -90,6 +90,9 @@ public class ModItems {
             () -> new RecordItem(4, ModSounds.BAR_BRAWL,
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
 
+    public static final RegistryObject<Item> COBALT_STAFF = ITEMS.register("cobalt_staff",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
