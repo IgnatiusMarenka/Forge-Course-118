@@ -22,6 +22,7 @@
   "item.mccourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
   "item.mccourse.cobalt_staff": "Cobalt Staff",
   "item.mccourse.cobalt_bow": "Cobalt Bow",
+  "item.mccourse.honey_bucket": "Honey Bucket",
 
   "block.mccourse.cobalt_block": "Cobalt Block",
   "block.mccourse.raw_cobalt_block": "Raw Cobalt Block",
@@ -41,7 +42,7 @@
   "block.mccourse.turnip_crop": "Turnip Crop",
   "block.mccourse.pink_rose": "Pink Rose",
   "block.mccourse.potted_pink_rose": "Potted Pink Rose",
-  "block.mccourse.potted_pink_rose": "Cobalt Blaster",
+  "block.mccourse.cobalt_blaster": "Cobalt Blaster",
 
   "itemGroup.coursemodtab": "MCCourse Mod",
 

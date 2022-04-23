@@ -3,6 +3,7 @@ package com.superingo.mccourse;
 import com.mojang.logging.LogUtils;
 import com.superingo.mccourse.block.ModBlocks;
 import com.superingo.mccourse.enchantment.ModEnchantments;
+import com.superingo.mccourse.fluid.ModFluids;
 import com.superingo.mccourse.item.ModItems;
 import com.superingo.mccourse.painting.ModPaintings;
 import com.superingo.mccourse.sound.ModSounds;
@@ -49,6 +50,7 @@ public class MCCourseMod
         ModEnchantments.register(eventBus);
         ModSounds.register(eventBus);
         ModPaintings.register(eventBus);
+        ModFluids.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -66,6 +68,10 @@ public class MCCourseMod
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COBALT_BLASTER.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLOWING.get(), RenderType.translucent());
 
         ModItemProperties.addCustomItemProperties();
     }

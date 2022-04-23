@@ -2,6 +2,7 @@ package com.superingo.mccourse.item;
 
 import com.superingo.mccourse.MCCourseMod;
 import com.superingo.mccourse.block.ModBlocks;
+import com.superingo.mccourse.fluid.ModFluids;
 import com.superingo.mccourse.item.custom.*;
 import com.superingo.mccourse.sound.ModSounds;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -95,6 +96,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> COBALT_BOW = ITEMS.register("cobalt_bow",
             () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).durability(500)));
+
+    public static final RegistryObject<Item> HONEY_BUCKET = ITEMS.register("honey_bucket",
+            () -> new BucketItem(ModFluids.HONEY_FLUID,
+                    new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
