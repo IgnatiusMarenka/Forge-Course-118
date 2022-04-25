@@ -101,6 +101,10 @@ public class ModItems {
             () -> new BucketItem(ModFluids.HONEY_FLUID,
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(1)));
 
+    public static final RegistryObject<Item> CHERRY_BLOSSOM_SIGN_ITEM = ITEMS.register("cherry_blossom_sign",
+            () -> new SignItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(16),
+                    ModBlocks.CHERRY_BLOSSOM_SIGN.get(), ModBlocks.CHERRY_BLOSSOM_WALL_SIGN.get()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
