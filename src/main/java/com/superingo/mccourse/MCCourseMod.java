@@ -2,12 +2,16 @@ package com.superingo.mccourse;
 
 import com.mojang.logging.LogUtils;
 import com.superingo.mccourse.block.ModBlocks;
+import com.superingo.mccourse.block.entity.ModBlockEntities;
 import com.superingo.mccourse.enchantment.ModEnchantments;
 import com.superingo.mccourse.fluid.ModFluids;
 import com.superingo.mccourse.item.ModItems;
 import com.superingo.mccourse.painting.ModPaintings;
+import com.superingo.mccourse.screen.CobaltBlasterScreen;
+import com.superingo.mccourse.screen.ModMenuTypes;
 import com.superingo.mccourse.sound.ModSounds;
 import com.superingo.mccourse.util.ModItemProperties;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
@@ -52,6 +56,9 @@ public class MCCourseMod
         ModPaintings.register(eventBus);
         ModFluids.register(eventBus);
 
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -74,6 +81,8 @@ public class MCCourseMod
         ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLOWING.get(), RenderType.translucent());
 
         ModItemProperties.addCustomItemProperties();
+
+        MenuScreens.register(ModMenuTypes.COBALT_BLASTER_MENU.get(), CobaltBlasterScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
