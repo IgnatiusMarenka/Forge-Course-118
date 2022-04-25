@@ -7,6 +7,7 @@ import com.superingo.mccourse.enchantment.ModEnchantments;
 import com.superingo.mccourse.fluid.ModFluids;
 import com.superingo.mccourse.item.ModItems;
 import com.superingo.mccourse.painting.ModPaintings;
+import com.superingo.mccourse.recipe.ModRecipes;
 import com.superingo.mccourse.screen.CobaltBlasterScreen;
 import com.superingo.mccourse.screen.ModMenuTypes;
 import com.superingo.mccourse.sound.ModSounds;
@@ -58,6 +59,8 @@ public class MCCourseMod
 
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+
+        ModRecipes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
