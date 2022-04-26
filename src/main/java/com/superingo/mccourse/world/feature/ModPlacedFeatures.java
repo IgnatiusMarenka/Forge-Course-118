@@ -1,0 +1,13 @@
+package com.superingo.mccourse.world.feature;
+
+import net.minecraft.core.Holder;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+
+public class ModPlacedFeatures {
+    public static final Holder<PlacedFeature> CHERRY_BLOSSOM_PLACED =
+            PlacementUtils.register("cherry_blossom_placed",
+                    ModConfiguredFeature.CHERRY_BLOSSOM_SPAWN, VegetationPlacements.treePlacement(
+                            PlacementUtils.countExtra(1, 0.1f, 2)));
+}
