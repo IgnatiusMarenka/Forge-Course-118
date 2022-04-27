@@ -3,6 +3,7 @@ package com.superingo.mccourse.event;
 import com.superingo.mccourse.MCCourseMod;
 import com.superingo.mccourse.command.ReturnHomeCommand;
 import com.superingo.mccourse.command.SetHomeCommand;
+import com.superingo.mccourse.config.MCCourseClientConfigs;
 import com.superingo.mccourse.util.KaupenTitleScreen;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.world.entity.player.Player;
@@ -51,7 +52,8 @@ public class ModEvents {
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
     public static void openGui(ScreenOpenEvent event) {
-        if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof KaupenTitleScreen)) {
+        if (MCCourseClientConfigs.CUSTOM_TITLE_SCREEN.get() &&
+                event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof KaupenTitleScreen)) {
             event.setScreen(new KaupenTitleScreen());
         }
     }

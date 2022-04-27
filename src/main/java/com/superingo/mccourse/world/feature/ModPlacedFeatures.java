@@ -1,5 +1,7 @@
 package com.superingo.mccourse.world.feature;
 
+import com.superingo.mccourse.config.MCCourseClientConfigs;
+import com.superingo.mccourse.config.MCCourseCommonConfigs;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
@@ -17,6 +19,6 @@ public class ModPlacedFeatures {
             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
     public static final Holder<PlacedFeature> COBALT_ORE_PLACED = PlacementUtils.register("cobalt_ore_placed",
-            ModConfiguredFeature.COBALT_ORE, ModOrePlacement.commonOrePlacement(7, //VeinsPerChunk
+            ModConfiguredFeature.COBALT_ORE, ModOrePlacement.commonOrePlacement(MCCourseCommonConfigs.COBALT_ORE_VEINS_PER_CHUNK.get(),
                     HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 }

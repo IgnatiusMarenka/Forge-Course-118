@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import com.superingo.mccourse.block.ModBlocks;
 import com.superingo.mccourse.block.ModWoodtypes;
 import com.superingo.mccourse.block.entity.ModBlockEntities;
+import com.superingo.mccourse.config.MCCourseClientConfigs;
+import com.superingo.mccourse.config.MCCourseCommonConfigs;
 import com.superingo.mccourse.enchantment.ModEnchantments;
 import com.superingo.mccourse.fluid.ModFluids;
 import com.superingo.mccourse.item.ModItems;
@@ -25,7 +27,9 @@ import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -60,6 +64,9 @@ public class MCCourseMod
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MCCourseClientConfigs.SPEC, "mccourse-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MCCourseCommonConfigs.SPEC, "mccourse-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

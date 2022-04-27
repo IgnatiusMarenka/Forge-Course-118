@@ -1,6 +1,7 @@
 package com.superingo.mccourse.world.feature;
 
 import com.superingo.mccourse.block.ModBlocks;
+import com.superingo.mccourse.config.MCCourseCommonConfigs;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
@@ -51,5 +52,5 @@ public class ModConfiguredFeature {
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_COBALT_ORE.get().defaultBlockState()));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> COBALT_ORE = FeatureUtils.register("cobalt_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_COBALT_ORES, 9));
+            Feature.ORE, new OreConfiguration(OVERWORLD_COBALT_ORES, MCCourseCommonConfigs.COBALT_ORE_VEIN_SIZE.get()));
 }
