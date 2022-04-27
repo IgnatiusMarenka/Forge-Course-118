@@ -105,6 +105,9 @@ public class ModItems {
             () -> new SignItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).stacksTo(16),
                     ModBlocks.CHERRY_BLOSSOM_SIGN.get(), ModBlocks.CHERRY_BLOSSOM_WALL_SIGN.get()));
 
+    public static final RegistryObject<Item> MAGIC_DUST = ITEMS.register("magic_dust",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

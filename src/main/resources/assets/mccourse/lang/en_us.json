@@ -23,6 +23,7 @@
   "item.mccourse.cobalt_staff": "Cobalt Staff",
   "item.mccourse.cobalt_bow": "Cobalt Bow",
   "item.mccourse.honey_bucket": "Honey Bucket",
+  "item.mccourse.magic_dust": "Magic Dust",
 
   "block.mccourse.cobalt_block": "Cobalt Block",
   "block.mccourse.raw_cobalt_block": "Raw Cobalt Block",
@@ -51,6 +52,7 @@
   "block.mccourse.cherry_blossom_sign": "Cherry Blossom Sign",
   "block.mccourse.cherry_blossom_leaves": "Cherry Blossom Leaves",
   "block.mccourse.cherry_blossom_sapling": "Cherry Blossom Sapling",
+  "block.mccourse.winter_window": "Winter Window",
 
   "itemGroup.coursemodtab": "MCCourse Mod",
 
