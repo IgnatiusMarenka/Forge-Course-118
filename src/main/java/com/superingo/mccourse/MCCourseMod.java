@@ -11,10 +11,12 @@ import com.superingo.mccourse.enchantment.ModEnchantments;
 import com.superingo.mccourse.fluid.ModFluids;
 import com.superingo.mccourse.item.ModItems;
 import com.superingo.mccourse.painting.ModPaintings;
+import com.superingo.mccourse.potion.ModPotions;
 import com.superingo.mccourse.recipe.ModRecipes;
 import com.superingo.mccourse.screen.CobaltBlasterScreen;
 import com.superingo.mccourse.screen.ModMenuTypes;
 import com.superingo.mccourse.sound.ModSounds;
+import com.superingo.mccourse.util.BetterBrewingRecipe;
 import com.superingo.mccourse.util.ModItemProperties;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -22,11 +24,13 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -63,6 +67,8 @@ public class MCCourseMod
 
         ModRecipes.register(eventBus);
         ModEffects.register(eventBus);
+
+        ModPotions.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -108,6 +114,9 @@ public class MCCourseMod
 
             BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
             Sheets.addWoodType(ModWoodtypes.CHERRY_BLOSSOM);
+
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                    ModItems.COBALT_INGOT.get(), ModPotions.FREEZE_POTION.get()));
         });
     }
 }

@@ -25,6 +25,10 @@
   "item.mccourse.honey_bucket": "Honey Bucket",
   "item.mccourse.magic_dust": "Magic Dust",
 
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+
   "block.mccourse.cobalt_block": "Cobalt Block",
   "block.mccourse.raw_cobalt_block": "Raw Cobalt Block",
   "block.mccourse.cobalt_ore": "Cobalt Ore",
@@ -61,5 +65,6 @@
   "tooltip.mccourse.dowsing_rod.tooltip": "Press §eSHIFT§r for more Information!",
   "tooltip.block.speedy_block": "It gets REALLY speedy!",
 
-  "enchantment.mccourse.lightning_striker": "Lightning Striker"
+  "enchantment.mccourse.lightning_striker": "Lightning Striker",
+  "effect.mccourse.freeze": "Freeze"
 }
