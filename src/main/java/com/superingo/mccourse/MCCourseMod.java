@@ -6,6 +6,7 @@ import com.superingo.mccourse.block.ModWoodtypes;
 import com.superingo.mccourse.block.entity.ModBlockEntities;
 import com.superingo.mccourse.config.MCCourseClientConfigs;
 import com.superingo.mccourse.config.MCCourseCommonConfigs;
+import com.superingo.mccourse.effect.ModEffects;
 import com.superingo.mccourse.enchantment.ModEnchantments;
 import com.superingo.mccourse.fluid.ModFluids;
 import com.superingo.mccourse.item.ModItems;
@@ -61,6 +62,7 @@ public class MCCourseMod
         ModMenuTypes.register(eventBus);
 
         ModRecipes.register(eventBus);
+        ModEffects.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
